@@ -441,7 +441,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
-            this.Text = "Moveset Editor v0.1";
+            this.Text = "Moveset Editor v0.2";
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
