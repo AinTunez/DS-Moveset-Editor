@@ -39,6 +39,7 @@
             this.CloneAnimBtn = new System.Windows.Forms.Button();
             this.AnimBox = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.RestoreAnimBackupBtn = new System.Windows.Forms.Button();
             this.RevertRefBtn = new System.Windows.Forms.Button();
             this.SaveRefBtn = new System.Windows.Forms.Button();
             this.isRefBox = new System.Windows.Forms.GroupBox();
@@ -194,6 +195,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.RestoreAnimBackupBtn);
             this.groupBox3.Controls.Add(this.RevertRefBtn);
             this.groupBox3.Controls.Add(this.SaveRefBtn);
             this.groupBox3.Controls.Add(this.isRefBox);
@@ -208,20 +210,31 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Editor";
             // 
+            // RestoreAnimBackupBtn
+            // 
+            this.RestoreAnimBackupBtn.Location = new System.Drawing.Point(77, 363);
+            this.RestoreAnimBackupBtn.Name = "RestoreAnimBackupBtn";
+            this.RestoreAnimBackupBtn.Size = new System.Drawing.Size(239, 39);
+            this.RestoreAnimBackupBtn.TabIndex = 13;
+            this.RestoreAnimBackupBtn.TabStop = false;
+            this.RestoreAnimBackupBtn.Text = "Restore From Backup";
+            this.RestoreAnimBackupBtn.UseVisualStyleBackColor = true;
+            this.RestoreAnimBackupBtn.Click += new System.EventHandler(this.RestoreAnimBackupBtn_Click);
+            // 
             // RevertRefBtn
             // 
-            this.RevertRefBtn.Location = new System.Drawing.Point(259, 289);
+            this.RevertRefBtn.Location = new System.Drawing.Point(77, 318);
             this.RevertRefBtn.Name = "RevertRefBtn";
-            this.RevertRefBtn.Size = new System.Drawing.Size(131, 39);
+            this.RevertRefBtn.Size = new System.Drawing.Size(239, 39);
             this.RevertRefBtn.TabIndex = 12;
             this.RevertRefBtn.TabStop = false;
-            this.RevertRefBtn.Text = "Revert";
+            this.RevertRefBtn.Text = "Revert to Saved";
             this.RevertRefBtn.UseVisualStyleBackColor = true;
             this.RevertRefBtn.Click += new System.EventHandler(this.RevertRefBtn_Click);
             // 
             // SaveRefBtn
             // 
-            this.SaveRefBtn.Location = new System.Drawing.Point(13, 289);
+            this.SaveRefBtn.Location = new System.Drawing.Point(77, 272);
             this.SaveRefBtn.Name = "SaveRefBtn";
             this.SaveRefBtn.Size = new System.Drawing.Size(239, 40);
             this.SaveRefBtn.TabIndex = 11;
@@ -441,7 +454,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
-            this.Text = "Moveset Editor v0.2";
+            this.Text = "Moveset Editor v0.3";
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -491,6 +504,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveReferenceSettingsToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown refMovesetBox;
         private System.Windows.Forms.Button RevertRefBtn;
+        private System.Windows.Forms.Button RestoreAnimBackupBtn;
     }
 }
 

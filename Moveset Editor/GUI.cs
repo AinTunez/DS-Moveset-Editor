@@ -64,7 +64,7 @@ namespace Moveset_Editor
                 {
                     FilePath = ofd.FileName;
                     c0000 = DataFile.LoadFromFile<ANIBND>(FilePath);
-                    c0000.CreateBackup();
+                    c0000.CreateBackup("mebak");
                 } catch (Exception ex)
                 {
                     MessageBox.Show(@"Error loading ANIBND.\n\n" + ex.ToString());
@@ -191,6 +191,7 @@ namespace Moveset_Editor
                 anim.EventList = activeHandler.OriginalEvents;
                 anim.RefAnimID = -1;
             }
+            MessageBox.Show("Reference settings saved.");
         }
 
         private void SaveRefBtn_Click(object sender, EventArgs e)
@@ -382,6 +383,21 @@ namespace Moveset_Editor
             {
                 currentTae.Animations.Remove(activeHandler.Anim);
                 RefreshAnimationList();
+            }
+        }
+
+        private void RestoreAnimBackupBtn_Click(object sender, EventArgs e)
+        {
+            var h = activeHandler;
+            if (h == null) return;
+            try
+            {
+                h.Anim = DataFile.LoadFromFile<ANIBND>(c0000.FilePath + ".mebak").PlayerTAE[h.MoveSet][h.Anim.ID];
+                RefreshEditor();
+                MessageBox.Show("Animation " + h.FullID + " restored from backup.");
+            } catch (Exception ex)
+            {
+                MessageBox.Show(@"Error loading animation from backup.\n\n" + ex.ToString());
             }
         }
     }
