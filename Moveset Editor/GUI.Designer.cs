@@ -100,6 +100,7 @@
             this.DeleteMovesetBtn.Name = "DeleteMovesetBtn";
             this.DeleteMovesetBtn.Size = new System.Drawing.Size(69, 33);
             this.DeleteMovesetBtn.TabIndex = 3;
+            this.DeleteMovesetBtn.TabStop = false;
             this.DeleteMovesetBtn.Text = "Delete";
             this.DeleteMovesetBtn.UseVisualStyleBackColor = true;
             this.DeleteMovesetBtn.Click += new System.EventHandler(this.DeleteMovesetBtn_Click);
@@ -110,6 +111,7 @@
             this.CloneMovesetBtn.Name = "CloneMovesetBtn";
             this.CloneMovesetBtn.Size = new System.Drawing.Size(61, 33);
             this.CloneMovesetBtn.TabIndex = 2;
+            this.CloneMovesetBtn.TabStop = false;
             this.CloneMovesetBtn.Text = "Clone";
             this.CloneMovesetBtn.UseVisualStyleBackColor = true;
             this.CloneMovesetBtn.Click += new System.EventHandler(this.CloneMovesetBtn_Click);
@@ -125,6 +127,7 @@
             this.MovesetBox.Name = "MovesetBox";
             this.MovesetBox.Size = new System.Drawing.Size(193, 564);
             this.MovesetBox.TabIndex = 0;
+            this.MovesetBox.TabStop = false;
             this.MovesetBox.SelectedIndexChanged += new System.EventHandler(this.MovesetBox_SelectedIndexChanged);
             // 
             // groupBox1
@@ -157,6 +160,7 @@
             this.DeleteAnimBtn.Name = "DeleteAnimBtn";
             this.DeleteAnimBtn.Size = new System.Drawing.Size(69, 33);
             this.DeleteAnimBtn.TabIndex = 3;
+            this.DeleteAnimBtn.TabStop = false;
             this.DeleteAnimBtn.Text = "Delete";
             this.DeleteAnimBtn.UseVisualStyleBackColor = true;
             this.DeleteAnimBtn.Click += new System.EventHandler(this.DeleteAnimBtn_Click);
@@ -167,6 +171,7 @@
             this.CloneAnimBtn.Name = "CloneAnimBtn";
             this.CloneAnimBtn.Size = new System.Drawing.Size(61, 33);
             this.CloneAnimBtn.TabIndex = 2;
+            this.CloneAnimBtn.TabStop = false;
             this.CloneAnimBtn.Text = "Clone";
             this.CloneAnimBtn.UseVisualStyleBackColor = true;
             this.CloneAnimBtn.Click += new System.EventHandler(this.CloneAnimBtn_Click);
@@ -181,6 +186,7 @@
             this.AnimBox.Name = "AnimBox";
             this.AnimBox.Size = new System.Drawing.Size(281, 564);
             this.AnimBox.TabIndex = 0;
+            this.AnimBox.TabStop = false;
             this.AnimBox.SelectedIndexChanged += new System.EventHandler(this.AnimBox_SelectedIndexChanged);
             // 
             // groupBox3
@@ -208,6 +214,7 @@
             this.RevertRefBtn.Name = "RevertRefBtn";
             this.RevertRefBtn.Size = new System.Drawing.Size(131, 39);
             this.RevertRefBtn.TabIndex = 12;
+            this.RevertRefBtn.TabStop = false;
             this.RevertRefBtn.Text = "Revert";
             this.RevertRefBtn.UseVisualStyleBackColor = true;
             this.RevertRefBtn.Click += new System.EventHandler(this.RevertRefBtn_Click);
@@ -218,6 +225,7 @@
             this.SaveRefBtn.Name = "SaveRefBtn";
             this.SaveRefBtn.Size = new System.Drawing.Size(239, 40);
             this.SaveRefBtn.TabIndex = 11;
+            this.SaveRefBtn.TabStop = false;
             this.SaveRefBtn.Text = "Save Reference Settings (Ctrl+S)";
             this.SaveRefBtn.UseVisualStyleBackColor = true;
             this.SaveRefBtn.Click += new System.EventHandler(this.SaveRefBtn_Click);
@@ -276,6 +284,7 @@
             this.refAnimNameBox.ReadOnly = true;
             this.refAnimNameBox.Size = new System.Drawing.Size(348, 22);
             this.refAnimNameBox.TabIndex = 8;
+            this.refAnimNameBox.TabStop = false;
             // 
             // label1
             // 
@@ -333,6 +342,7 @@
             this.animNameBox.ReadOnly = true;
             this.animNameBox.Size = new System.Drawing.Size(377, 22);
             this.animNameBox.TabIndex = 5;
+            this.animNameBox.TabStop = false;
             // 
             // isReferenceCheckBox
             // 
@@ -341,6 +351,7 @@
             this.isReferenceCheckBox.Name = "isReferenceCheckBox";
             this.isReferenceCheckBox.Size = new System.Drawing.Size(110, 21);
             this.isReferenceCheckBox.TabIndex = 0;
+            this.isReferenceCheckBox.TabStop = false;
             this.isReferenceCheckBox.Text = "Is Reference";
             this.isReferenceCheckBox.UseVisualStyleBackColor = true;
             this.isReferenceCheckBox.CheckedChanged += new System.EventHandler(this.isReferenceBox_CheckedChanged);

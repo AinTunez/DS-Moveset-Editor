@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MeowDSIO;
 using MeowDSIO.DataFiles;
@@ -163,10 +160,20 @@ namespace Moveset_Editor
                 int id = (int)refIdBox.Value;
                 int newId = moveset * 10000 + id;
 
-                if (!c0000.PlayerTAE.ContainsKey(moveset)) return;
-                if (!c0000.PlayerTAE[moveset].AnimationIDs.Contains(id)) return;
 
+                if (newId == anim.RefAnimID) return;
+                if (!c0000.PlayerTAE.ContainsKey(moveset))
+                {
+                    MessageBox.Show("Invalid moveset.");
+                    return;
+                }
+                if (!c0000.PlayerTAE[moveset].AnimationIDs.Contains(id))
+                {
+                    MessageBox.Show("Animation ID not found in specified moveset.");
+                    return;
+                }
 
+                anim.IsReference = true;
                 anim.RefAnimID = newId;
                 anim.EventList = new ObservableCollection<TimeActEventBase>();
 
@@ -176,18 +183,13 @@ namespace Moveset_Editor
                     var newEvt = CopyEvent(evt);
                     anim.EventList.Add(newEvt);
                 }
-
-                currentTae.Animations.Add(anim);
-                currentTae.Animations = currentTae.Animations.OrderBy(a => a.ID).ToList();
-                RefreshAnimationList();
-                AnimBox.SelectedIndex = index;
+                RefreshEditor();
             }
             else
             {
+                anim.IsReference = false;
                 anim.EventList = activeHandler.OriginalEvents;
                 anim.RefAnimID = -1;
-                RefreshAnimationList();
-                AnimBox.SelectedIndex = index;
             }
         }
 
